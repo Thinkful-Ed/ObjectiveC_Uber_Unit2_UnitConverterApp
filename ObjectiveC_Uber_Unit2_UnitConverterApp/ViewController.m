@@ -70,6 +70,8 @@
         make.leading.equalTo(self.view.mas_leading).offset(leadingOffset);
         make.trailing.equalTo(self.view.mas_trailing).offset(trailingOffset);
     }];
+    
+    [self updateTemperatureLabelsWithCelsiusValue:0];
 }
 
 - (void)didReceiveMemoryWarning {
