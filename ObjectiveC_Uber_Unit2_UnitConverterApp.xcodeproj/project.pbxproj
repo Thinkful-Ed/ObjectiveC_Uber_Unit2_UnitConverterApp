@@ -10,10 +10,10 @@
 		18E36E121B4ACA1E00CB16D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E36E111B4ACA1E00CB16D5 /* main.m */; };
 		18E36E151B4ACA1E00CB16D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E36E141B4ACA1E00CB16D5 /* AppDelegate.m */; };
 		18E36E181B4ACA1E00CB16D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E36E171B4ACA1E00CB16D5 /* ViewController.m */; };
-		18E36E1B1B4ACA1E00CB16D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E36E191B4ACA1E00CB16D5 /* Main.storyboard */; };
 		18E36E1D1B4ACA1E00CB16D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E36E1C1B4ACA1E00CB16D5 /* Images.xcassets */; };
 		18E36E201B4ACA1E00CB16D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E36E1E1B4ACA1E00CB16D5 /* LaunchScreen.xib */; };
 		18E36E2C1B4ACA1E00CB16D5 /* ObjectiveC_Uber_Unit2_UnitConverterAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E36E2B1B4ACA1E00CB16D5 /* ObjectiveC_Uber_Unit2_UnitConverterAppTests.m */; };
+		DE170D22A9B007D5D551E7B9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3990625ACF579C361DE92B /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +34,14 @@
 		18E36E141B4ACA1E00CB16D5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		18E36E161B4ACA1E00CB16D5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		18E36E171B4ACA1E00CB16D5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		18E36E1A1B4ACA1E00CB16D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18E36E1C1B4ACA1E00CB16D5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		18E36E1F1B4ACA1E00CB16D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		18E36E251B4ACA1E00CB16D5 /* ObjectiveC_Uber_Unit2_UnitConverterAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveC_Uber_Unit2_UnitConverterAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E36E2A1B4ACA1E00CB16D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18E36E2B1B4ACA1E00CB16D5 /* ObjectiveC_Uber_Unit2_UnitConverterAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveC_Uber_Unit2_UnitConverterAppTests.m; sourceTree = "<group>"; };
+		2A4D504989381C77A7F4950C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EF3990625ACF579C361DE92B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F221497D22B90E39A1D6214F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE170D22A9B007D5D551E7B9 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +69,8 @@
 				18E36E0E1B4ACA1E00CB16D5 /* ObjectiveC_Uber_Unit2_UnitConverterApp */,
 				18E36E281B4ACA1E00CB16D5 /* ObjectiveC_Uber_Unit2_UnitConverterAppTests */,
 				18E36E0D1B4ACA1E00CB16D5 /* Products */,
+				A36429E5409F671B116D7CD7 /* Pods */,
+				381388599C61AA023F40E1A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,7 +90,6 @@
 				18E36E141B4ACA1E00CB16D5 /* AppDelegate.m */,
 				18E36E161B4ACA1E00CB16D5 /* ViewController.h */,
 				18E36E171B4ACA1E00CB16D5 /* ViewController.m */,
-				18E36E191B4ACA1E00CB16D5 /* Main.storyboard */,
 				18E36E1C1B4ACA1E00CB16D5 /* Images.xcassets */,
 				18E36E1E1B4ACA1E00CB16D5 /* LaunchScreen.xib */,
 				18E36E0F1B4ACA1E00CB16D5 /* Supporting Files */,
@@ -119,6 +123,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		381388599C61AA023F40E1A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF3990625ACF579C361DE92B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A36429E5409F671B116D7CD7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F221497D22B90E39A1D6214F /* Pods.debug.xcconfig */,
+				2A4D504989381C77A7F4950C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18E36E2F1B4ACA1E00CB16D5 /* Build configuration list for PBXNativeTarget "ObjectiveC_Uber_Unit2_UnitConverterApp" */;
 			buildPhases = (
+				64425C7EF8CE7AC1CB3BC7AA /* Check Pods Manifest.lock */,
 				18E36E081B4ACA1E00CB16D5 /* Sources */,
 				18E36E091B4ACA1E00CB16D5 /* Frameworks */,
 				18E36E0A1B4ACA1E00CB16D5 /* Resources */,
+				623480D7AEB28296F0049702 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,7 +222,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18E36E1B1B4ACA1E00CB16D5 /* Main.storyboard in Resources */,
 				18E36E201B4ACA1E00CB16D5 /* LaunchScreen.xib in Resources */,
 				18E36E1D1B4ACA1E00CB16D5 /* Images.xcassets in Resources */,
 			);
@@ -213,6 +235,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		623480D7AEB28296F0049702 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64425C7EF8CE7AC1CB3BC7AA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18E36E081B4ACA1E00CB16D5 /* Sources */ = {
@@ -244,14 +299,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		18E36E191B4ACA1E00CB16D5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18E36E1A1B4ACA1E00CB16D5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		18E36E1E1B4ACA1E00CB16D5 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -347,6 +394,7 @@
 		};
 		18E36E301B4ACA1E00CB16D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F221497D22B90E39A1D6214F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ObjectiveC_Uber_Unit2_UnitConverterApp/Info.plist;
@@ -357,6 +405,7 @@
 		};
 		18E36E311B4ACA1E00CB16D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A4D504989381C77A7F4950C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ObjectiveC_Uber_Unit2_UnitConverterApp/Info.plist;
@@ -418,6 +467,7 @@
 				18E36E311B4ACA1E00CB16D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18E36E321B4ACA1E00CB16D5 /* Build configuration list for PBXNativeTarget "ObjectiveC_Uber_Unit2_UnitConverterAppTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +476,7 @@
 				18E36E341B4ACA1E00CB16D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
