@@ -88,6 +88,8 @@
     self.celsiusLabel.text = [NSString stringWithFormat:@"%.02f°C", celsius];
     self.fahrenheitLabel.text = [NSString stringWithFormat:@"%.02f°F", fahrenheit];
 }
-
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
 
 @end
