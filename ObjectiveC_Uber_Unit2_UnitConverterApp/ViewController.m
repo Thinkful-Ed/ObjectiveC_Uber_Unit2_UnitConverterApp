@@ -15,6 +15,7 @@
 @property (weak, nonatomic) UIPickerView *celsiusPickerView;
 @property (weak, nonatomic) UILabel *celsiusLabel;
 @property (weak, nonatomic) UILabel *fahrenheitLabel;
+@property (strong, nonatomic) NSArray *celsiusNumbers;
 
 @end
 
@@ -23,6 +24,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //set up celsiusNumbers -> to be displayed by UIPickerView's dataSource.
+    NSMutableArray *mutableCelsiusNumbers = [NSMutableArray new];
+    for (int i=-100; i<=100; i++) {
+        [mutableCelsiusNumbers addObject:@(i)];
+    }
+    self.celsiusNumbers = [mutableCelsiusNumbers copy];
+    
+    //set up visual components
     self.view.backgroundColor = [UIColor colorWithHue:0.6 saturation:1.0 brightness:0.18 alpha:1.0];
     
     UIPickerView *celsiusPickerView = [UIPickerView new];
@@ -70,12 +79,36 @@
         make.leading.equalTo(self.view.mas_leading).offset(leadingOffset);
         make.trailing.equalTo(self.view.mas_trailing).offset(trailingOffset);
     }];
+    
+    //protocols/delegates
+    self.celsiusPickerView.delegate = self;
+    self.celsiusPickerView.dataSource = self;
+    
+    [self.celsiusPickerView selectRow:100 inComponent:0 animated:NO];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - UIPickerViewDelegate
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    NSNumber *celsiusNumber = [self.celsiusNumbers objectAtIndex:row];
+    float celsiusFloat = [celsiusNumber floatValue];
+    [self updateTemperatureLabelsWithCelsiusValue:celsiusFloat];
 }
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    NSNumber *celsiusNumber = [self.celsiusNumbers objectAtIndex:row];
+    int celsiusInt = [celsiusNumber intValue];
+    return [NSString stringWithFormat:@"%d°C", celsiusInt];
+}
+
+#pragma mark- UIPickerViewDataSource
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return self.celsiusNumbers.count;
+}
+
+
+
 
 - (void)updateTemperatureLabelsWithCelsiusValue:(float)celsius {
     float fahrenheit = [TemperatureConverter celsiusToFahrenheight:celsius];
@@ -83,8 +116,16 @@
     self.celsiusLabel.text = [NSString stringWithFormat:@"%.02f°C", celsius];
     self.fahrenheitLabel.text = [NSString stringWithFormat:@"%.02f°F", fahrenheit];
 }
+
+
+
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
 }
 
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 @end
