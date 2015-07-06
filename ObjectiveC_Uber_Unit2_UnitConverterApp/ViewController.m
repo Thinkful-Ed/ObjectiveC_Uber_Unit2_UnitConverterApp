@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Masonry.h"
+#import "TemperatureConverter.h"
 
 @interface ViewController ()
 
@@ -83,7 +84,7 @@
     [self updateTemperatureLabelsWithCelsiusValue:self.celsiusSlider.value];
 }
 - (void)updateTemperatureLabelsWithCelsiusValue:(float)celsius {
-    float fahrenheit = celsius * 1.8 + 32;
+    float fahrenheit = [TemperatureConverter celsiusToFahrenheight:celsius];
     
     self.celsiusLabel.text = [NSString stringWithFormat:@"%.02f°C", celsius];
     self.fahrenheitLabel.text = [NSString stringWithFormat:@"%.02f°F", fahrenheit];
