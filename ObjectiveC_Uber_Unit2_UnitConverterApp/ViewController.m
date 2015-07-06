@@ -12,7 +12,7 @@
 
 @interface ViewController ()
 
-@property (weak, nonatomic) UISlider *celsiusSlider;
+@property (weak, nonatomic) UIPickerView *celsiusPickerView;
 @property (weak, nonatomic) UILabel *celsiusLabel;
 @property (weak, nonatomic) UILabel *fahrenheitLabel;
 
@@ -25,21 +25,19 @@
     
     self.view.backgroundColor = [UIColor colorWithHue:0.6 saturation:1.0 brightness:0.18 alpha:1.0];
     
-    UISlider *celsiusSlider = [UISlider new];
+    UIPickerView *celsiusPickerView = [UIPickerView new];
     UILabel *celsiusLabel = [UILabel new];
     UILabel *fahrenheitLabel = [UILabel new];
-    [self.view addSubview:celsiusSlider];
+    [self.view addSubview:celsiusPickerView];
+
     [self.view addSubview:celsiusLabel];
     [self.view addSubview:fahrenheitLabel];
-    self.celsiusSlider = celsiusSlider;
+    self.celsiusPickerView = celsiusPickerView;
     self.celsiusLabel = celsiusLabel;
     self.fahrenheitLabel = fahrenheitLabel;
     
     UIColor *color = [UIColor colorWithHue:0.22 saturation:1.0 brightness:0.9 alpha:1.0];
-    self.celsiusSlider.tintColor = color;
-    self.celsiusSlider.minimumValue = -100;
-    self.celsiusSlider.maximumValue = 100;
-    [self.celsiusSlider addTarget:self action:@selector(changedSlider) forControlEvents:UIControlEventValueChanged];
+    celsiusPickerView.backgroundColor = [UIColor whiteColor];
     
     self.celsiusLabel.text = @"0°C";
     self.fahrenheitLabel.text = @"32°F";
@@ -55,12 +53,11 @@
     CGFloat trailingOffset = -16;
     CGFloat verticalSpace = 16;
     
-    [self.celsiusSlider mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.view).offset(-verticalSpace);
-        make.leading.equalTo(self.view.mas_leading).offset(leadingOffset);
-        make.trailing.equalTo(self.view.mas_trailing).offset(trailingOffset);
+    [self.celsiusPickerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view.mas_bottom);
+        make.leading.equalTo(self.view.mas_leading);
+        make.trailing.equalTo(self.view.mas_trailing);
     }];
-    
     [self.celsiusLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         UIView *topLayoutGuide = (id)self.topLayoutGuide;
         make.top.equalTo(topLayoutGuide.mas_bottom).offset(verticalSpace);
@@ -80,9 +77,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)changedSlider {
-    [self updateTemperatureLabelsWithCelsiusValue:self.celsiusSlider.value];
-}
 - (void)updateTemperatureLabelsWithCelsiusValue:(float)celsius {
     float fahrenheit = [TemperatureConverter celsiusToFahrenheight:celsius];
     
