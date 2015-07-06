@@ -22,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor colorWithHue:0.6 saturation:1.0 brightness:0.18 alpha:1.0];
+    
     UISlider *celsiusSlider = [UISlider new];
     UILabel *celsiusLabel = [UILabel new];
     UILabel *fahrenheitLabel = [UILabel new];
@@ -32,12 +34,21 @@
     self.celsiusLabel = celsiusLabel;
     self.fahrenheitLabel = fahrenheitLabel;
     
+    UIColor *color = [UIColor colorWithHue:0.22 saturation:1.0 brightness:0.9 alpha:1.0];
+    self.celsiusSlider.tintColor = color;
     self.celsiusSlider.minimumValue = -100;
     self.celsiusSlider.maximumValue = 100;
     [self.celsiusSlider addTarget:self action:@selector(changedSlider) forControlEvents:UIControlEventValueChanged];
     
     self.celsiusLabel.text = @"0°C";
     self.fahrenheitLabel.text = @"32°F";
+    
+    [self.celsiusLabel setFont:[UIFont boldSystemFontOfSize:60]];
+    self.celsiusLabel.textColor = color;
+    self.celsiusLabel.textAlignment = NSTextAlignmentRight;
+    [self.fahrenheitLabel setFont:[UIFont boldSystemFontOfSize:60]];
+    self.fahrenheitLabel.textColor = color;
+    self.fahrenheitLabel.textAlignment = NSTextAlignmentRight;
     
     CGFloat leadingOffset = 16;
     CGFloat trailingOffset = -16;
@@ -69,7 +80,14 @@
 }
 
 - (void)changedSlider {
-    //TODO: update labels
+    [self updateTemperatureLabelsWithCelsiusValue:self.celsiusSlider.value];
 }
+- (void)updateTemperatureLabelsWithCelsiusValue:(float)celsius {
+    float fahrenheit = celsius * 1.8 + 32;
+    
+    self.celsiusLabel.text = [NSString stringWithFormat:@"%.02f°C", celsius];
+    self.fahrenheitLabel.text = [NSString stringWithFormat:@"%.02f°F", fahrenheit];
+}
+
 
 @end
