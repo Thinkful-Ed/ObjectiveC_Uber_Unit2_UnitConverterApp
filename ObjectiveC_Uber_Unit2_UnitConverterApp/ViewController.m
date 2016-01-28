@@ -61,8 +61,7 @@
     }];
     
     [self.celsiusLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        UIView *topLayoutGuide = (id)self.topLayoutGuide;
-        make.top.equalTo(topLayoutGuide.mas_bottom).offset(verticalSpace);
+        make.top.equalTo(self.view.mas_top).offset(verticalSpace);
         make.leading.equalTo(self.view.mas_leading).offset(leadingOffset);
         make.trailing.equalTo(self.view.mas_trailing).offset(trailingOffset);
     }];
