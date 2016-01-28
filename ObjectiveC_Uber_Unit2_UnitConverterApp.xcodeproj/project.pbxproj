@@ -13,6 +13,7 @@
 		18E36E1D1B4ACA1E00CB16D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E36E1C1B4ACA1E00CB16D5 /* Images.xcassets */; };
 		18E36E201B4ACA1E00CB16D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E36E1E1B4ACA1E00CB16D5 /* LaunchScreen.xib */; };
 		18E36E2C1B4ACA1E00CB16D5 /* ObjectiveC_Uber_Unit2_UnitConverterAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E36E2B1B4ACA1E00CB16D5 /* ObjectiveC_Uber_Unit2_UnitConverterAppTests.m */; };
+		18E36E371B4AD3BB00CB16D5 /* TemperatureConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E36E361B4AD3BB00CB16D5 /* TemperatureConverter.m */; };
 		DE170D22A9B007D5D551E7B9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3990625ACF579C361DE92B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,8 @@
 		18E36E251B4ACA1E00CB16D5 /* ObjectiveC_Uber_Unit2_UnitConverterAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveC_Uber_Unit2_UnitConverterAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E36E2A1B4ACA1E00CB16D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18E36E2B1B4ACA1E00CB16D5 /* ObjectiveC_Uber_Unit2_UnitConverterAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveC_Uber_Unit2_UnitConverterAppTests.m; sourceTree = "<group>"; };
+		18E36E351B4AD3BB00CB16D5 /* TemperatureConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureConverter.h; sourceTree = "<group>"; };
+		18E36E361B4AD3BB00CB16D5 /* TemperatureConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureConverter.m; sourceTree = "<group>"; };
 		2A4D504989381C77A7F4950C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF3990625ACF579C361DE92B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F221497D22B90E39A1D6214F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 				18E36E1C1B4ACA1E00CB16D5 /* Images.xcassets */,
 				18E36E1E1B4ACA1E00CB16D5 /* LaunchScreen.xib */,
 				18E36E0F1B4ACA1E00CB16D5 /* Supporting Files */,
+				18E36E351B4AD3BB00CB16D5 /* TemperatureConverter.h */,
+				18E36E361B4AD3BB00CB16D5 /* TemperatureConverter.m */,
 			);
 			path = ObjectiveC_Uber_Unit2_UnitConverterApp;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 				18E36E181B4ACA1E00CB16D5 /* ViewController.m in Sources */,
 				18E36E151B4ACA1E00CB16D5 /* AppDelegate.m in Sources */,
 				18E36E121B4ACA1E00CB16D5 /* main.m in Sources */,
+				18E36E371B4AD3BB00CB16D5 /* TemperatureConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
